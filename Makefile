@@ -30,7 +30,7 @@ FX      := $(RGBDS)rgbfix
 FXFLAGS := \
   --color-compatible \
   --sgb-compatible \
-  --ram-size 0x03 \
+  --ram-size 0x04 \
   --old-licensee 0x33 \
   --new-licensee "01" \
   --mbc-type 0x1B \
