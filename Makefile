@@ -10,7 +10,12 @@ rwildcard = $(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) $(filter $(
 # Dev tools binaries and options
 #
 
-RGBDS   :=
+ifneq ($(wildcard rgbds/.*),)
+RGBDS := rgbds/
+else
+RGBDS :=
+endif
+
 
 2BPP    := $(RGBDS)rgbgfx
 
@@ -25,7 +30,7 @@ FX      := $(RGBDS)rgbfix
 FXFLAGS := \
   --color-compatible \
   --sgb-compatible \
-  --ram-size 0x03 \
+  --ram-size 0x04 \
   --old-licensee 0x33 \
   --new-licensee "01" \
   --mbc-type 0x1B \
