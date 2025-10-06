@@ -39,7 +39,7 @@ FXFLAGS := \
 
 # Default target: build and test only the US 1.0 revision.
 # (Use `make all` to build and test all targets.)
-default: build test
+default: redux 
 
 #
 # Generic rules
