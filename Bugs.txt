@@ -9,3 +9,8 @@ Seems like the first letter gets replaced by an 8x8 tile (2nd to last or last ti
 (Non-VWF related)
 - Fix the Tunic glitch, mentioned inside entities.asm
 - Keep the Color Dungeon gravestone opened once it has been opened
+
+
+FIXES FOR RGBDS 1.0.0
+Strings need the CHARVAL command around them. Like this:
+cp   " "	->	cp   CHARVAL(" ")
